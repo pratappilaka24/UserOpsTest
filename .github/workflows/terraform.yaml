@@ -17,6 +17,6 @@ jobs:
       run: |
         curl -X POST \
           -H "Content-Type: application/json" \
-          -H "Authorization: Basic cHJhdGFwcmVkZHllY2UyMDA1QGdtYWlsLmNvbTpBVEFUVDN4RmZHRjBSeXpPcndpbnFwdmFQVThWN0dPYnRsNms0SjlNQU5JcU9Nc25hMEQySXZTY05ESnZQVzBlUDVIbTRwSm9aaFU3OS1QaTJwa1JNeW1XMm9NUk9Od0djamFmMS1VTktiTzhGSENXN1BBZkJ2SjBlY1NLRGZtd25JSFRDMGhxaEotdElUcWZMZkhjMElpWTd0T25ZdmtxemlmbGhwR1VSZ2VhMUlTQ0U1Nk95OGM9MEExNDVCN0M=" \
+          -u "pratapreddyece2005@gmail.com:ATATT3xFfGF0RyzOrwinqpvaPU8V7GObtl6k4J9MANIqOMsna0D2IvScNDJvPW0eP5Hm4pJoZhU79-Pi2pkRMymW2oMRONwGcjaf1-UNKbO8FHCW7PAfBvJ0ecSKDfmwnIHTC0hqhJ-tITqfLfHc0IiY7tOnYvkqziflhpGURgea1ISCE56Oy8c=0A145B7C" \
           -d '{"email":"pratapreddyb4u@gmail.com","fullname":"Test-User","username":"Test_User","password":"Def@u1t"}' \
           https://aspiringarchitect.atlassian.net/wiki/rest/api/user
