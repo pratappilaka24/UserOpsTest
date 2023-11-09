@@ -1,0 +1,22 @@
+name: HTTP POST Request Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  make-post-request:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Make HTTP POST Request
+      run: |
+        curl -X POST \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Basic ${{ secrets.USER_NAME }}:${{ secrets.API_TOKEN }}" \
+          -d '{"email":"pratapreddyb4u@gmail.com","fullname":"Test-User","username":"Test_User","password":"Def@u1t"}' \
+          ${{ secrets.CONFLUENCE_API_URL }}
