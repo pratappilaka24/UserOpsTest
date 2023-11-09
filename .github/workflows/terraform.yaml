@@ -18,9 +18,5 @@ jobs:
         curl -X POST \
           --header "Content-Type: application/json" \
           --user 'pratapreddyece2005@gmail.com:ATATT3xFfGF0RyzOrwinqpvaPU8V7GObtl6k4J9MANIqOMsna0D2IvScNDJvPW0eP5Hm4pJoZhU79-Pi2pkRMymW2oMRONwGcjaf1-UNKbO8FHCW7PAfBvJ0ecSKDfmwnIHTC0hqhJ-tITqfLfHc0IiY7tOnYvkqziflhpGURgea1ISCE56Oy8c=0A145B7C' \
-          --url https://aspiringarchitect.atlassian.net//wiki/api/v2/user/access/invite-by-email
-          --data '{
-          "emails": [
-            "pratapreddyb4u@gmail.com"
-          ]
-        }'
+          --url https://aspiringarchitect.atlassian.net//wiki/api/v2/user/access/invite-by-email \
+          --data '{"emails": ["pratapreddyb4u@gmail.com"]}'
