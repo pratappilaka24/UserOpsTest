@@ -1,4 +1,4 @@
-name: HTTP POST Request Example
+name: User Ops Sample
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Make HTTP POST Request
+    - name: Add user to Confluence
       run: |
         curl -X POST \
           --header "Content-Type: application/json" \
