@@ -17,6 +17,6 @@ jobs:
       run: |
         curl -X POST \
           -H "Content-Type: application/json" \
-          -H "Authorization: Basic ${{ secrets.USER_NAME }}:${{ secrets.API_TOKEN }}" \
+          -H "Authorization: Basic 'pratapreddyece2005@gmail.com':'ATATT3xFfGF0-tD2he0Nfx30jsXRBsncOh-slXn9fgsBHh95cVmyegE2g8LsSlAezPxQQ0_6Gi6ykHRcTuF3tLrG3SjXGr6u9DZWD0CdB4Cwz21Mb-DO3t9RYy7Z45_x2ZcaQ4sQKpHp75wUUFgNNCrltSIvOkz9FvcmQ5kFpYs68U2Q8tc0pKc=364DA494'" \
           -d '{"email":"pratapreddyb4u@gmail.com","fullname":"Test-User","username":"Test_User","password":"Def@u1t"}' \
-          ${{ secrets.CONFLUENCE_API_URL }}
+          https://aspiringarchitect.atlassian.net/user
