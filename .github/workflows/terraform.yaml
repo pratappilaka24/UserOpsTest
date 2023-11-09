@@ -16,7 +16,7 @@ jobs:
     - name: Make HTTP POST Request
       run: |
         curl -X POST \
-          -H "Content-Type: application/json" \
-          -u pratapreddyece2005@gmail.com:ATATT3xFfGF0RyzOrwinqpvaPU8V7GObtl6k4J9MANIqOMsna0D2IvScNDJvPW0eP5Hm4pJoZhU79-Pi2pkRMymW2oMRONwGcjaf1-UNKbO8FHCW7PAfBvJ0ecSKDfmwnIHTC0hqhJ-tITqfLfHc0IiY7tOnYvkqziflhpGURgea1ISCE56Oy8c=0A145B7C \
-          -d '{"email":"pratapreddyb4u@gmail.com","fullname":"Test-User","username":"Test_User","password":"Def@u1t"}' \
-          https://aspiringarchitect.atlassian.net/wiki/rest/api/user
+          --header "Content-Type: application/json" \
+          --user pratapreddyece2005@gmail.com:ATATT3xFfGF0RyzOrwinqpvaPU8V7GObtl6k4J9MANIqOMsna0D2IvScNDJvPW0eP5Hm4pJoZhU79-Pi2pkRMymW2oMRONwGcjaf1-UNKbO8FHCW7PAfBvJ0ecSKDfmwnIHTC0hqhJ-tITqfLfHc0IiY7tOnYvkqziflhpGURgea1ISCE56Oy8c=0A145B7C \
+          --data '{"email":"pratapreddyb4u@gmail.com","fullname":"Test-User","username":"Test_User","password":"Def@u1t"}' \
+          --url https://aspiringarchitect.atlassian.net/rest/api/user
