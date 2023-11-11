@@ -22,12 +22,13 @@ jobs:
 
     - name: Add user to Confluence
       run: |
-        http_response= $(curl -X POST \
+        HTTP_RESPONSE= $(curl -X POST \
           --header "Content-Type: application/json" \
           --user '${{ secrets.CONFLUENCE_USER }}:${{ secrets.CONFLUENCE_API_TOKEN }}' \
           --url ${{ secrets.CONFLUENCE_URL }}/wiki/api/v2/user/access/invite-by-email \
           --data '{"emails": ["pratapreddyb4u@gmail.com"]}') 
-        echo "$http_response"
+        HTTP_STATUS=$(echo $HTTP_RESPONSE | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
+        echo "$HTTP_STATUS"
 
     - name: Add user to Github
       run: |
