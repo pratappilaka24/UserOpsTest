@@ -22,7 +22,7 @@ jobs:
 
     - name: Add user to Confluence
       run: |
-        HTTP_STATUS= $(curl -w "%{http_code}" -o /dev/null -X POST \
+        HTTP_STATUS= $(curl --write-out "HTTPSTATUS:%{http_code}" -X POST \
           --header "Content-Type: application/json" \
           --user '${{ secrets.CONFLUENCE_USER }}:${{ secrets.CONFLUENCE_API_TOKEN }}' \
           --url ${{ secrets.CONFLUENCE_URL }}/wiki/api/v2/user/access/invite-by-email \
