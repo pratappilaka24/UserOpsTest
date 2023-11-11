@@ -30,7 +30,7 @@ jobs:
           --user '${{ secrets.CONFLUENCE_USER }}:${{ secrets.CONFLUENCE_API_TOKEN }}' \
           --url ${{ secrets.CONFLUENCE_URL }}/wiki/api/v2/user/access/invite-by-email \
           --data '{"emails": ["pratapreddyb4u@gmail.com"]}'>>$env:CODE
-        echo $CODE
+        echo $env:CODE
 
     - name: Add user to Github
       run: |
