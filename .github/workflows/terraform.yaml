@@ -13,7 +13,7 @@ on:
         
 
 jobs:
-  add-user-to-confluence:
+  user-ops-automation:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,4 +26,12 @@ jobs:
           --header "Content-Type: application/json" \
           --user '${{ secrets.CONFLUENCE_USER }}:${{ secrets.CONFLUENCE_API_TOKEN }}' \
           --url ${{ secrets.CONFLUENCE_URL }}/wiki/api/v2/user/access/invite-by-email \
-          --data '{"emails": ["pratapreddyb4u@gmail.com"]}'
+          --data '{"emails": ["pratapreddyb4u@gmail.com"]}'  
+
+    - name: Add user to Github
+      run: |
+        curl -X POST \
+          --header "Content-Type: application/vnd.github.v3+json" \
+          --header "Authorization: token ${{ secrets.GIT_PAT_TOKEN }}" \          
+          --url ${{ secrets.GIT_API_URL }}/orgs/${{ secrets.GIT_ORG_NAME }}/memberships/pratapreddyb4u@gmail.com \
+          --data '{"role": "member"}'
